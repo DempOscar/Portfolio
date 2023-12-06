@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import marked from 'marked';
+import { marked } from 'marked';
 
 function Post() {
   const { slug } = useParams();
   const [postContent, setPostContent] = useState('');
+
+  console.log("IM IN A POST NOW!!!!")
 
   useEffect(() => {
     // Fetch the markdown content of the post

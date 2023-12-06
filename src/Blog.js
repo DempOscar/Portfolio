@@ -6,25 +6,33 @@ function Blog() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    // Fetch post list from the posts directory
     const fetchPosts = async () => {
-      // Example: Fetching post file names from an API or static list
-      const postFiles = ['first_post.md', 'another_post.md']; // Add your post file names here
+      const postFiles = ['first_post.md', 'another_post.md']; // Your post file names
+
       const postsData = await Promise.all(postFiles.map(async file => {
         const response = await fetch(`/posts/${file}`);
-        console.log("Reading File")
         const text = await response.text();
+
+        // Extracting the title (assuming it's the first line and an H1)
+        const titleLine = text.split('\n')[0];
+        const title = titleLine.replace(/^# /, ''); // Remove '# ' from the start
+
+        // Optionally, remove the title line from the content
+        const contentWithoutTitle = text.substring(text.indexOf('\n') + 1);
+
         return {
           slug: file.replace('.md', ''),
-          title: marked(text).match(/<h1>(.*?)<\/h1>/)[1], // Extract title from markdown
-          content: marked(text)
+          title: title,
+          content: marked(contentWithoutTitle) // Convert markdown content to HTML
         };
       }));
+
       setPosts(postsData);
     };
 
     fetchPosts();
   }, []);
+
 
   return (
     <div className="home-background">
