@@ -14,7 +14,7 @@ function App() {
     </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="./ContactMe" element={<ContactMe />} />
+        <Route path="ContactMe.js" element={<ContactMe />} />
       </Routes>
     </Router>
   );
