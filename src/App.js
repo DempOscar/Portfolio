@@ -14,14 +14,12 @@ function App() {
       <Link to="/" className="home-button">Home</Link> 
       <Link to="/ContactMe.js" className="contactMe-button">ContactMe</Link>
       <Link to="/Portfolio.js" className="portfolio-button">Portfolio</Link>
-      <Link to="/AboutMe.js" className="aboutme-button">AboutMe</Link> 
-      {/* Other navigation links */}
     </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about-me" element={<AboutMe />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact-me" element={<ContactMe />} />
+        <Route path="src/about-me" element={<AboutMe />} />
+        <Route path="src/portfolio" element={<Portfolio />} />
+        <Route path="src/contact-me" element={<ContactMe />} />
       </Routes>
     </Router>
   );
