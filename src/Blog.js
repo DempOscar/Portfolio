@@ -9,7 +9,7 @@ function Blog() {
     // Fetch post list from the posts directory
     const fetchPosts = async () => {
       // Example: Fetching post file names from an API or static list
-      const postFiles = ['first_post.md', 'another_post.md']; // Add your post file names here
+      const postFiles = ['first_post.md', 'mdanother_post.']; // Add your post file names here
       const postsData = await Promise.all(postFiles.map(async file => {
         const response = await fetch(`/posts/${file}`);
         console.log("Reading File")
@@ -41,3 +41,4 @@ function Blog() {
 }
 
 export default Blog;
+
