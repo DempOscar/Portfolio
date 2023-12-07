@@ -1,13 +1,15 @@
 .App {
   text-align: center;
+  
 }
 .home-background {
   height: 100vh; 
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   background: linear-gradient(135deg, #6ee7b7, #3b82f6); 
   color: white;
+  
 }
 .home-button {
   background-color: white;
@@ -40,6 +42,146 @@
   border-radius: 8px; 
   transition: background-color 0.3s, color 0.3s; 
 }
+
+ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+ol li button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ol li button:hover {
+  background-color: #45a049;
+}
+
+.blog-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+.blog-header h3 {
+  color: #ffffff;
+  margin-top: 0;
+  padding-top: 20px; 
+  text-align: center; 
+}
+
 .contactme-button:hover {
   background-color: #f1f1f1;
 }
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.welcome-header h3{
+  font-size: 64px;
+  color: #ffffff;
+}
+
+.bubble-title {
+
+  font-size: 64px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 0; 
+  border: 5px solid #ffffff;  
+  border-radius: 10px;       
+
+}
+
+h2 {
+  font-size: 30px;
+  color: #ffffff;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+
+p {
+  font-size: 30px;
+  color: #ffffff;
+  margin-top: 20px;
+  border: 5px solid #ffffff;  
+  border-radius: 10px;    
+}
+
+.contact-header {
+  text-align: center;
+  width: 100%;
+  position: static;
+  left: 0;
+  background-color: #f4f4f400;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info p {
+  font-size: 30px;
+  color: #000000;
+}
+.contact-p2  p2{
+  text-align: center;
+  padding-top: 100px; 
+  color: #000000;
+}
+
+.contact-info a {
+  color: #070707;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 4px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  color: black; 
+}
+
+.footer-built-text {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: smaller;
+  color: #333;
+}
+
+.footer-map {
+  width: 100%;
+  height: auto;
+  max-width: 400px; 
+}
+
