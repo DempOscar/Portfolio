@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import {marked} from 'marked'; // A library to convert markdown to HTML
 import './App.css';
 
