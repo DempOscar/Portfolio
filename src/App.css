@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
   
@@ -93,10 +94,12 @@ ol li button:hover {
   text-align: center;
 }
 
-.welcome-header h3{
+.welcome-header {
   font-size: 64px;
   color: #ffffff;
 }
+
+
 
 .bubble-title {
 

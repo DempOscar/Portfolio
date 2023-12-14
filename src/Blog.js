@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {marked} from 'marked'; // A library to convert markdown to HTML
@@ -10,7 +11,7 @@ function Blog() {
   useEffect(() => {
     const fetchPosts = async () => {
       // Example: Fetching post file names from an API or static list
-      const postFiles = ['first_post.md']; // Add your post file names here
+      const postFiles = ['Work Experience.md']; // Add your post file names here
       const postsData = await Promise.all(postFiles.map(async file => {
         const response = await fetch(`/posts/${file}`);
         const text = await response.text();
@@ -38,19 +39,23 @@ function Blog() {
 
   return (
     <div className="home-background">
-      <h1>Welcome to my Blog!</h1>
-      <div className="blog-header"> {/* Corrected classname to className */}
-        <h3>This is where I give updates on my projects and work.</h3>
+      <title>Blog</title>
+      <div>
+        <h1>This is my Blog!</h1>
+          <p1>This is where I give updates on my projects and work.</p1>
+              <ol>
+                  {posts.map(post => (
+                    <li key={post.slug}>
+                      <button onClick={() => window.location.href = `/post/${post.slug}`}>
+                        {post.title}
+
+                      </button>
+                    </li>
+                  ))}
+              </ol>
       </div>
-      <ol>
-        {posts.map(post => (
-          <li key={post.slug}>
-            <button onClick={() => window.location.href = `/post/${post.slug}`}>
-              {post.title}
-            </button>
-          </li>
-        ))}
-      </ol>
+
+      
     </div>
   );
 }
